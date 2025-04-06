@@ -35,3 +35,15 @@
         pointer-events: none;
     }
 }
+
+@media (max-width: 1920px) {
+    .concerts {
+        &__bg-block {
+            height: 150vh;
+        }
+
+        &__photo {
+            height: 150vh;
+        }
+    }
+}

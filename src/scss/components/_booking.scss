@@ -18,7 +18,6 @@
         position: relative;
         display: flex;
         gap: 20px;
-        padding: 0 50px;
         margin-bottom: 30px;
 
         &::before,
@@ -33,15 +32,16 @@
         }
 
         &::before {
-            left: -50px;
+            left: -100px;
         }
 
         &::after {
-            right: -50px;
+            right: -100px;
         }
     }
 
     &__link {
+        max-width: 120px;
         transition: transform 0.3s ease-in;
 
         &:hover {
@@ -50,7 +50,7 @@
     }
 
     &__icon-link {
-        max-width: 120px;
+        width: 100%;
     }
 
     &__blocks {
@@ -73,6 +73,106 @@
         &:focus {
             color: var(--accent);
             text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .booking {
+        padding-top: 50px;
+
+        &__title {
+            font-size: 2.875rem;
+        }
+
+        &__links {
+            margin-bottom: 20px;
+
+            &::before,
+            &::after {
+                width: 60px;
+                height: 10px;
+            }
+
+            &::before {
+                left: -70px;
+            }
+
+            &::after {
+                right: -70px;
+            }
+        }
+
+        &__link {
+            max-width: 80px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .booking {
+        padding-top: 20px;
+
+        &__title {
+            font-size: 2.125rem;
+        }
+
+        &__links {
+            text-align: center;
+            gap: 10px;
+
+            &::before,
+            &::after {
+                width: 34px;
+                height: 6px;
+            }
+
+            &::before {
+                left: -40px;
+            }
+
+            &::after {
+                right: -40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .booking {
+        &__wrapper {
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__links {
+            margin-bottom: 10px;
+
+            &::before,
+            &::after {
+                width: 22px;
+                height: 4px;
+            }
+
+            &::before {
+                left: -30px;
+            }
+
+            &::after {
+                right: -30px;
+            }
+        }
+
+        &__link {
+            max-width: 50px;
+        }
+
+        &__email {
+            font-size: 1.125rem;
         }
     }
 }

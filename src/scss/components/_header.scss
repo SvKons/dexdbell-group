@@ -79,6 +79,12 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .nav {
+        margin-right: 22%;
+    }
+}
+
 @media (max-width: 1024px) {
     .header {
         &__logo {
@@ -87,6 +93,8 @@
     }
 
     .nav {
+        margin-right: 28%;
+
         &__list {
             gap: 5px;
         }
@@ -110,7 +118,7 @@
         top: 0;
         right: -100%;
         width: 40%;
-        background-color: var(--dark-grey);
+        background-color: var(--black);
         transition: right 0.3s ease;
         z-index: 1000;
         display: flex;
@@ -119,11 +127,10 @@
         justify-content: center;
         padding-top: 60px;
         margin-right: 0;
+        border-bottom-left-radius: 40px;
 
         &.active {
             right: 0;
-            background-color: var(--black);
-            border-bottom-left-radius: 40px;
         }
 
         &__wrapper {

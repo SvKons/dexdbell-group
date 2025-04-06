@@ -15,3 +15,37 @@
         color: var(--main-red);
     }
 }
+
+@media (max-width: 1920px) {
+    .concerts-description {
+        font-size: 2.25rem;
+
+        &__wrapper {
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .concerts-description {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .concerts-description {
+        font-size: 1.625rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .concerts-description {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .concerts-description {
+        font-size: 1rem;
+    }
+}

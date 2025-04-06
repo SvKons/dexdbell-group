@@ -47,3 +47,67 @@
         }
     }
 }
+
+@media (max-width: 1440px) {
+    .concerts {
+        &__bg-block {
+            height: 110vh;
+        }
+
+        &__photo {
+            height: 110vh;
+        }
+
+        &__photo {
+            top: 90px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .concerts {
+        &__bg-block {
+            height: 94vh;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .concerts {
+        &__bg-block {
+            height: 74vh;
+        }
+
+        &__decor {
+            top: 0;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .concerts {
+        &__bg-block {
+            height: 44vh;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .concerts {
+        &__bg-block {
+            height: 36vh;
+        }
+
+        &__photo {
+            top: 40px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .concerts {
+        &__bg-block {
+            height: 30vh;
+        }
+    }
+}

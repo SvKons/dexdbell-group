@@ -48,3 +48,69 @@
         z-index: 100;
     }
 }
+
+@media (max-width: 1920px) {
+    .concerts-list {
+        &__date {
+            font-size: 4.375rem;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .concerts-list {
+        &__date {
+            font-size: 3.125rem;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .concerts-list {
+        &__date {
+            font-size: 2.25rem;
+        }
+
+        &__img-wrap {
+            max-width: 260px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .concerts-list {
+        &__date {
+            font-size: 1.75rem;
+        }
+
+        &__img-wrap {
+            max-width: 210px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .concerts-list {
+        &__date {
+            font-size: 1.25rem;
+        }
+
+        &__block {
+            gap: 20px;
+        }
+
+        &__buttons-wrap {
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .concerts-list {
+        &__block {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+        }
+    }
+}

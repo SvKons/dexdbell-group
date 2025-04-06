@@ -56,9 +56,6 @@
 
         &__photo {
             height: 110vh;
-        }
-
-        &__photo {
             top: 90px;
         }
     }
@@ -88,6 +85,10 @@
     .concerts {
         &__bg-block {
             height: 44vh;
+        }
+
+        &__photo {
+            top: 70px;
         }
     }
 }

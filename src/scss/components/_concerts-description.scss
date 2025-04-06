@@ -41,11 +41,21 @@
 @media (max-width: 768px) {
     .concerts-description {
         font-size: 1.25rem;
+
+        &__wrapper {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
     }
 }
 
 @media (max-width: 425px) {
     .concerts-description {
         font-size: 1rem;
+
+        &__wrapper {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 }

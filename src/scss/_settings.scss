@@ -1,6 +1,7 @@
 /* stylelint-disable order/order */
 html {
     box-sizing: border-box;
+    margin: 0;
 }
 
 *,
@@ -9,21 +10,13 @@ html {
     box-sizing: inherit;
 }
 
-.page {
-    height: 100%;
-    font-family: var(--main-font);
-    -webkit-text-size-adjust: 100%;
+body {
+    overflow-x: hidden;
 }
 
-.page__body {
-    background-color: var(--black);
+.page {
     font-family: var(--main-font);
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.2;
-    margin: 0;
-    min-width: 320px;
-    min-height: 100%;
+    overflow-x: hidden;
 }
 
 img {

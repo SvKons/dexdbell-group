@@ -1,0 +1,34 @@
+.line {
+    &__img {
+        display: block;
+        width: 100%;
+
+        &_size {
+            max-height: 80px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .line {
+        &__img {
+            &_size {
+                max-height: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .line {
+        &__img_size {
+            max-height: 30px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .line {
+        display: none;
+    }
+}

@@ -3,7 +3,10 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/link";
 @import "./components/header";
+@import "./components/line";
+@import "./components/button";
 @import "./components/main-bg";
 @import "./components/concerts-block";
 @import "./components/concerts-list";

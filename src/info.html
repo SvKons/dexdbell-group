@@ -2,22 +2,18 @@
 <html lang="ru" class="page">
     @include('partials/head.html')
 
-    <body class="page__body">
-        <div class="site-container">
-            @include('partials/header.html')
-            <main class="main">
-                <div class="main__wrapper container">
-                    <div class="bg-wrap"></div>
-                    @include('partials/info-links.html')
-                    @include('partials/music-links.html')
-                </div>
-                @include('partials/booking.html')
-                @include('partials/info-bottom.html')
-                <button class="scroll-to-top" aria-label="Scroll to top">
-                    ↑
-                </button>
-            </main>
-            @include('partials/footer.html')
-        </div>
+    <body>
+        @include('partials/header.html')
+        <main class="main">
+            <div class="main__wrapper container">
+                <div class="bg-wrap"></div>
+                @include('partials/info-links.html')
+                @include('partials/music-links.html')
+            </div>
+            @include('partials/booking.html')
+            @include('partials/info-bottom.html')
+            <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+        </main>
+        @include('partials/footer.html')
     </body>
 </html>

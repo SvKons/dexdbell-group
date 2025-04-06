@@ -1,0 +1,37 @@
+.concerts {
+    background-color: var(--bbackground);
+
+    &__bg-block {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+    }
+
+    &__decor {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        height: 70%;
+        background: url("../img/bg-concerts.png") no-repeat center center;
+        background-size: contain;
+        z-index: 1;
+        transform: translate(0px, 0px);
+        transition: transform 0.1s ease-out;
+        pointer-events: none;
+    }
+
+    &__photo {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        height: 100vh;
+        width: 100%;
+        transform: translateX(-50%);
+        background-image: url(../img/bg-photo-concerts.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+}

@@ -1,6 +1,5 @@
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
-// Реализация бургер-меню
-import { burger } from "./functions/burger";
-burger();
+import { moveImg } from "./functions/moveImg";
+moveImg();

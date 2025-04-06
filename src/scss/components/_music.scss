@@ -4,7 +4,6 @@
     background-color: var(--black);
     padding-top: 30px;
     padding-bottom: 60px;
-    z-index: 999;
 }
 
 .tabs {
@@ -100,7 +99,7 @@
 
     &__block-text {
         color: var(--light);
-        font-size: 7rem;
+        font-size: 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -118,5 +117,134 @@
         width: 100%;
         height: 100%;
         border: 0;
+    }
+}
+
+@media (max-width: 1750px) {
+    .tabs {
+        &__block-text {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .tabs {
+        &__blocks {
+            padding: 0px 300px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .tabs {
+        &__blocks {
+            padding: 0px 200px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .tabs {
+        &__blocks {
+            padding: 0px 100px;
+        }
+
+        &__button {
+            font-size: 1.5rem;
+        }
+
+        &__panel {
+            &_bg::after {
+                background-size: 110% auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        &__release-name {
+            font-size: 2rem;
+        }
+        &__panel {
+            &_bg::after {
+                top: 380px;
+                background-size: 130% auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .tabs {
+        &__blocks {
+            grid-template-columns: 1fr;
+        }
+
+        &__block-text {
+            gap: 10px;
+        }
+
+        &__img-wrap {
+            max-width: 320px;
+        }
+
+        &__panel {
+            &_bg::after {
+                top: 630px;
+                background-size: 270% auto;
+                height: 90%;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .music {
+        padding-bottom: 30px;
+    }
+
+    .tabs {
+        &__blocks {
+            gap: 20px;
+            padding: 0 50px;
+        }
+
+        &__block-text {
+            font-size: 1.875rem;
+        }
+
+        &__img-wrap {
+            max-width: 280px;
+        }
+
+        &__panel {
+            &_bg::after {
+                background-size: 333% auto;
+                height: 85%;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .tabs {
+        &__panel {
+            &_bg::after {
+                background-size: 370% auto;
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .tabs {
+        &__panel {
+            &_bg::after {
+                background-size: 377% auto;
+                top: 420px;
+                height: 88%;
+            }
+        }
     }
 }

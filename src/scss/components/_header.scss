@@ -73,8 +73,8 @@
 
 @media (max-width: 1440px) {
     .header {
-        &__logo {
-            max-height: 60px;
+        &__logo-wrap {
+            max-width: 60px;
         }
     }
 }
@@ -86,12 +86,6 @@
 }
 
 @media (max-width: 1024px) {
-    .header {
-        &__logo {
-            max-height: 40px;
-        }
-    }
-
     .nav {
         margin-right: 28%;
 
@@ -110,6 +104,10 @@
     .header {
         &__menu-wrap {
             padding: 10px 0;
+        }
+
+        &__logo-wrap {
+            max-width: 40px;
         }
     }
 
@@ -155,6 +153,11 @@
 }
 
 @media (max-width: 425px) {
+    .header {
+        &__logo-wrap {
+            max-width: 30px;
+        }
+    }
     .nav {
         width: 50%;
 

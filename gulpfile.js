@@ -46,7 +46,7 @@ const paths = {
     srcFontsFolder: `${srcFolder}/fonts`,
 };
 
-let isProd = false; // dev by default
+let isProd = true;
 
 const clean = () => {
     return del([buildFolder]);

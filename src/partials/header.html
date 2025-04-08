@@ -8,28 +8,56 @@
             </button>
             <div class="header__nav-wrapper">
                 <div class="header__menu-wrap">
-                    <a href="index.html" class="header__logo-wrap">
+                    <a
+                        href="index.html"
+                        class="header__logo-wrap"
+                        itemscope
+                        itemtype="https://schema.org/Organization"
+                    >
                         <img
                             src="./img/logo.png"
                             class="header__logo"
                             alt="Логотип Dexdbell"
+                            itemprop="logo"
                         />
+                        <meta itemprop="name" content="Dexdbell" />
                     </a>
 
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="concerts.html" class="nav__link link"
+                            <li
+                                class="nav__item"
+                                itemscope
+                                itemtype="https://schema.org/Article"
+                            >
+                                <a
+                                    href="concerts.html"
+                                    class="nav__link link"
+                                    itemprop="url"
                                     >Концерты</a
                                 >
                             </li>
-                            <li class="nav__item">
-                                <a href="music.html" class="nav__link link"
+                            <li
+                                class="nav__item"
+                                itemscope
+                                itemtype="https://schema.org/Article"
+                            >
+                                <a
+                                    href="music.html"
+                                    class="nav__link link"
+                                    itemprop="url"
                                     >Музыка</a
                                 >
                             </li>
-                            <li class="nav__item">
-                                <a href="info.html" class="nav__link link"
+                            <li
+                                class="nav__item"
+                                itemscope
+                                itemtype="https://schema.org/Article"
+                            >
+                                <a
+                                    href="info.html"
+                                    class="nav__link link"
+                                    itemprop="url"
                                     >Информация</a
                                 >
                             </li>

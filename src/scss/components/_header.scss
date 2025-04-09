@@ -38,8 +38,6 @@
 /* Nav */
 
 .nav {
-    margin-right: 32%;
-
     &__list {
         display: flex;
         justify-content: space-between;
@@ -79,16 +77,8 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .nav {
-        margin-right: 22%;
-    }
-}
-
 @media (max-width: 1024px) {
     .nav {
-        margin-right: 28%;
-
         &__list {
             gap: 5px;
         }
@@ -156,6 +146,10 @@
     .header {
         &__logo-wrap {
             max-width: 30px;
+        }
+
+        &__wrapper {
+            gap: 10px;
         }
     }
     .nav {

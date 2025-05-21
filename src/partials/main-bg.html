@@ -1,10 +1,13 @@
 <section class="main-bg">
     <h2 class="main-bg__title visually-hidden">Главное фото артистов</h2>
     <div class="main-bg__wrapper">
-        <img
-            src="./img/main-img.jpg"
-            class="main-bg__img"
-            alt="Главная картинка"
-        />
+        <picture>
+            <source srcset="./img/main-img.webp" type="image/webp" />
+            <img
+                src="./img/main-img.jpg"
+                class="main-bg__img"
+                alt="Главная картинка"
+            />
+        </picture>
     </div>
 </section>

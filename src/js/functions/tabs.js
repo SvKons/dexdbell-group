@@ -11,8 +11,6 @@ export function tabs() {
 
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
-            console.log(`Клик по кнопке: ${button.textContent.trim()}`);
-            console.log(`data-tab: ${button.dataset.tab}`);
             buttons.forEach((btn) =>
                 btn.classList.remove("tabs__button_active")
             );
@@ -23,13 +21,9 @@ export function tabs() {
             );
 
             const targetPanel = document.getElementById(button.dataset.tab);
-            console.log("Целевая панель:", targetPanel);
 
             if (targetPanel) {
                 targetPanel.classList.add("tabs__panel_active");
-                console.log(
-                    `Добавлен класс "tabs__panel_active" панели #${targetPanel.id}`
-                );
             } else {
                 console.error(`Панель с id="${button.dataset.tab}" не найдена`);
             }

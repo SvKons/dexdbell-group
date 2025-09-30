@@ -303,6 +303,10 @@ const htaccess = () => {
     return src(`${srcFolder}/.htaccess`).pipe(dest(buildFolder));
 };
 
+const jekyllConfig = () => {
+    return src(`${srcFolder}/_config.yml`).pipe(dest(buildFolder));
+};
+
 const watchFiles = () => {
     browserSync.init({
         server: {
@@ -336,6 +340,7 @@ const watchFiles = () => {
     watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
     watch(`${srcFolder}/*.html`, htmlInclude);
     watch(`${srcFolder}/.htaccess`, htaccess);
+    watch(`${srcFolder}/_config.yml`, jekyllConfig);
     watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
     watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
     watch(paths.srcSvg, svgSprites);
@@ -404,6 +409,7 @@ exports.default = series(
     clean,
     htmlInclude,
     htaccess,
+    jekyllConfig,
     scripts,
     styles,
     fonts,
@@ -417,6 +423,7 @@ exports.backend = series(
     clean,
     htmlInclude,
     htaccess,
+    jekyllConfig,
     scriptsBackend,
     stylesBackend,
     fonts,
@@ -430,6 +437,7 @@ exports.build = series(
     clean,
     htmlInclude,
     htaccess,
+    jekyllConfig,
     scripts,
     styles,
     fonts,

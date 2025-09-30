@@ -5,7 +5,7 @@
     }
 
     &__wrapper {
-        background-image: url(../../img/main-bg-2.jpg);
+        background-image: url(../img/main-bg-2.jpg);
         background-position: 15% center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -73,7 +73,7 @@
 @media (max-width: 1024px) {
     .main-bg {
         &__wrapper {
-            background-image: url(../../img/main-bg-mobile.jpg);
+            background-image: url(../img/main-bg-mobile.jpg);
             background-position: center;
         }
 

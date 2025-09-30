@@ -299,10 +299,35 @@ const htmlInclude = () => {
         .pipe(browserSync.stream());
 };
 
+const htaccess = () => {
+    return src(`${srcFolder}/.htaccess`).pipe(dest(buildFolder));
+};
+
 const watchFiles = () => {
     browserSync.init({
         server: {
             baseDir: `${buildFolder}`,
+            middleware: [
+                function (req, res, next) {
+                    if (
+                        !req.url.match(/\.[0-9a-z]+$/i) &&
+                        !req.url.endsWith("/")
+                    ) {
+                        const fs = require("fs");
+                        const path = require("path");
+                        const htmlFile = path.join(
+                            __dirname,
+                            buildFolder,
+                            req.url + ".html"
+                        );
+
+                        if (fs.existsSync(htmlFile)) {
+                            req.url = req.url + ".html";
+                        }
+                    }
+                    next();
+                },
+            ],
         },
     });
 
@@ -310,6 +335,7 @@ const watchFiles = () => {
     watch(paths.srcFullJs, scripts);
     watch(`${paths.srcPartialsFolder}/*.html`, htmlInclude);
     watch(`${srcFolder}/*.html`, htmlInclude);
+    watch(`${srcFolder}/.htaccess`, htaccess);
     watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
     watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
     watch(paths.srcSvg, svgSprites);
@@ -377,6 +403,7 @@ const toProd = (done) => {
 exports.default = series(
     clean,
     htmlInclude,
+    htaccess,
     scripts,
     styles,
     fonts,
@@ -389,6 +416,7 @@ exports.default = series(
 exports.backend = series(
     clean,
     htmlInclude,
+    htaccess,
     scriptsBackend,
     stylesBackend,
     fonts,
@@ -401,6 +429,7 @@ exports.build = series(
     toProd,
     clean,
     htmlInclude,
+    htaccess,
     scripts,
     styles,
     fonts,

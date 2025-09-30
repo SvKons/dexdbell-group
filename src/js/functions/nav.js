@@ -26,7 +26,11 @@ export function nav() {
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        const currentPage = window.location.pathname.split("/").pop();
+        const currentPath = window.location.pathname;
+        const currentPage =
+            currentPath === "/"
+                ? "/"
+                : "/" + currentPath.split("/").filter(Boolean).pop();
         const navLinks = document.querySelectorAll(".nav__link");
 
         navLinks.forEach((link) => {

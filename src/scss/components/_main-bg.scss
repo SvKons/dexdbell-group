@@ -104,15 +104,15 @@
                 font-size: 1.8rem;
             }
         }
+        &__img-wrap,
+        &__wrap-content {
+            max-width: 220px;
+        }
     }
 }
 
 @media (max-width: 425px) {
     .main-bg {
-        &__wrapper {
-            height: 60vh;
-        }
-
         &__img-wrap,
         &__wrap-content {
             max-width: 250px;
